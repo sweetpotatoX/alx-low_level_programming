@@ -5,10 +5,12 @@
  *@index: number to change
  *Retuen: 1 if works otherwise -1
  */
-int set_bit(unsigned long int *n, unsigned int index);
-unsigned int j;
-if (index >= sizeof(unsigned long int) * 8)
+int set_bit(unsigned long int *n, unsigned int index)
+{
+unsigned int m;
+if (index > 63)
 return (-1);
-*n |= (1UL << index);
+m = 1 << index;
+*n = (*n | m);
 return (1);
 }
