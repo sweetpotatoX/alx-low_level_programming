@@ -1,28 +1,24 @@
+#include "main.h"
 #include <stdio.h>
-#iclude "main.h"
-
 /**
- *clear_bit - sets the value og the required bit to 0
- *@n: Pointer to the number
- *@index: the required to clear number
- *
- *Return: 1 if works, -1 if didn't
+ * clear_bit - make the value of a bit to 0 
+ * @n: pointer to number
+ * @index: index position 
+ * Return: 1 if it worked, -1 if didin't
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-int clear_bit(unsigned long int *n, unsigned int index)
-{
-unsigned long int i;
-unsigned int hold;
+  unsigned long int j;
+  unsigned int hold;
 
-if (index > 64)
-return (-1);
-hold = index;
-for (i = 1; hold > 0; i *= 2, hold--)
-;
+  if (index > 64)
+    return (-1);
+  hold = index;
+  for (j = 1; hold > 0; j *= 2, hold--)
+    ;
 
-if ((*n >> index) & 1)
-*n -= i;
+  if ((*n >> index) & 1)
+    *n -= j;
 
-return (1);
+  return (1);
 }
