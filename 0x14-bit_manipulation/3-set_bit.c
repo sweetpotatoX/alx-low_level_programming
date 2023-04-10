@@ -1,8 +1,8 @@
 #iclude "main.h"
 /**
  *set_bit - it sets bit at num to 1
- *@j: points to num
- *@num: number to change
+ *@n: points to num
+ *@index: number to change
  *Retuen: 1 if works otherwise -1
  */
 int set_bit(unsigned long int *n, unsigned int index);
