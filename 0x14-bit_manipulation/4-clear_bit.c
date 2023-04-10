@@ -9,8 +9,14 @@
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-if (index > 63)
+unsigned long int j;
+unsigned int seet;
+if (index > 64)
 return (-1);
-*n = (~(1UL << index) & *n);
+seet = index;
+for (j = 1; seet > 0; j *= 2, seet--)
+;
+if ((*n >> index) & 1)
+*n -= j;
 return (1);
 }
