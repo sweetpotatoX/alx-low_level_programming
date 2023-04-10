@@ -9,6 +9,6 @@ int set_bit(unsigned long int *j, unsigned int num)
 {
 if (index > (8 * sizeof(*j)) - 1)
 return (-1);
-*j |= (1 << num);
+*j = *j | (1 << num);
 retun (1);
 }
