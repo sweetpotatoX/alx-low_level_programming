@@ -10,15 +10,19 @@
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-unsigned long int j;
-unsigned int sweet;
+int clear_bit(unsigned long int *n, unsigned int index)
+{
+unsigned long int i;
+unsigned int hold;
 
 if (index > 64)
 return (-1);
-hold = sweet;
-for (j = 1; sweet > 0; j *= 2, sweet--)
+hold = index;
+for (i = 1; hold > 0; i *= 2, hold--)
 ;
+
 if ((*n >> index) & 1)
-*n -= j;
+*n -= i;
+
 return (1);
 }
