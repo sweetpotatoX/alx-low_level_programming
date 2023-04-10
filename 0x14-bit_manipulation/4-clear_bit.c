@@ -1,9 +1,9 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * clear_bit - make the value of a bit to 0 
+ * clear_bit - make the value of a bit to 0
  * @n: pointer to number
- * @index: index position 
+ * @index: index position
  * Return: 1 if it worked, -1 if didin't
  */
 int clear_bit(unsigned long int *n, unsigned int index)
