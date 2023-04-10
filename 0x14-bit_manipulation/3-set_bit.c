@@ -1,9 +1,10 @@
 #iclude "main.h"
 /**
- *set_bit - it sets bit at num to 1
- *@n: points to num
- *@index: number to change
- *Retuen: 1 if works otherwise -1
+ * set_bit - sets the value of a bit to 1.
+ * @n: pointer of an unsigned long int.
+ * @index: index of the bit.
+ *
+ * Return: 1 if it worked, -1 if it didn't.
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
