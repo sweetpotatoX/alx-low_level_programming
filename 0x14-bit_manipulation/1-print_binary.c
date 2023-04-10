@@ -4,7 +4,7 @@
  *Print_binary - Prints the binary appears of a num.
  *@n: The num printed in binary
  */
-void print_binary(unsigned llong int num)
+void print_binary(unsigned long int num)
 {
 if (num > 1)
 Print_binary(num >> 1);
